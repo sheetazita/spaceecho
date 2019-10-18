@@ -23,6 +23,7 @@ Building components: 5hrs
 working with API: 3 hrs
 Total: 8 hours
 
-
+![](./project2-home.jpg)
+![](./project2-popup.jpg)
 
 
