@@ -7,6 +7,7 @@ api endpoint: https://api.nasa.gov/planetary/apod
 React Components:
 
 Header: this will render the header include the nav
+
 Home: this will display carousel of space pictures of the days
 
 2nd Page : 2nd page of displaying carousel of space pictures of the days
