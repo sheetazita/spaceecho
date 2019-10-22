@@ -1,0 +1,121 @@
+body{
+  background: black;
+  margin: auto;
+}
+
+header{
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  display: block;
+  /* border: 1px solid red; */
+  height: 300px;
+  justify-self: center;
+}
+
+#logo {
+  width: 100%;
+  margin: 70px auto;
+  color: white;
+  font-size: 150px;
+  text-align: center;
+  font-family: 'Audiowide', cursive;
+}
+
+p{
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  text-shadow: 5px -3px 4px black;
+  margin-top: -30px;
+}
+
+form{
+  display: block;
+  /* justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  border: 1px solid yellow;*/
+    /* grid-column-start: 2;
+  grid-column-end: 4; */
+  width: 100%;
+  margin: 30px auto;
+}
+input{
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+  height: 80px;
+  text-align: center;
+  font-size: 15px;
+  border: 3px solid white;
+  background: transparent;
+}
+
+input:focus{
+  background: white;
+  /* cursor: pointer; */
+}
+
+button {
+  height: 65px;
+  width: 15%;
+  border: 3px solid white;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background: transparent;
+  margin-top: 20px;
+  margin-left: 41%;
+  cursor: pointer;
+}
+
+#gif-display{
+  background: black;
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  object-fit: cover;
+  justify-content: center;
+  margin-top: -180px;
+}
+
+.gif-images{
+  width: 10%;
+  object-fit: cover; 
+  /* border: 1px solid red; */
+  background: solid black;
+}
+
+.imgContainer{
+  background: #000000;
+  /* background: black; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  margin-top: 80px;
+}
+
+.space-img{
+  width: 30%;
+  height: 600px;
+  object-fit: cover;
+  margin: 10px 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.hero{
+  padding-top: -15px;
+  /* border: 1px solid yellow; */
+}
+
+.profilePic{
+  width: 400px;
+}
