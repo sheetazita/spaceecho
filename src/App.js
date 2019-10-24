@@ -1,14 +1,13 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import Home from './components/Home';
 import Hero from './components/Hero';
 import Profile from './components/Profile';
-import axios from 'axios';
 import { getImage1, getImage2, getImage3, getImage4, getImage5, getImage6, getImage7, getImage8, getImage9, getGifs, generatePics } from './service/api-helper';
 
-let apiKey = "4rK3fduciaheLDga1gdCJwMdxz7hWweZqBSlLnoH";
+// let apiKey = "4rK3fduciaheLDga1gdCJwMdxz7hWweZqBSlLnoH";
 
 class App extends React.Component {
   constructor(props) {
@@ -16,7 +15,8 @@ class App extends React.Component {
     this.state = {
       img: [],
       gifs: [],
-      date: ""
+      date: "",
+      singleImg: ''
     }
   }
 
@@ -33,7 +33,7 @@ class App extends React.Component {
 
     const img = [img01, img02, img03, img04, img05, img06, img07, img08, img09];
     const gifs = await getGifs();
-    console.log(img)
+    // console.log(gifs)
     this.setState({
       img: img,
       gifs: gifs
@@ -41,34 +41,41 @@ class App extends React.Component {
 
   }
 
-  // handleChange = (e) => {
-  //   this.setState({
-  //     date: e.target.value
-  //   })
-  //   console.log(e.target.value);
-  // }
+  handleChange = (e) => {
+    this.setState({
+      date: e.target.value
+    })
+  }
 
-  // handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   const img = await generatePics(this.state.date);
-  //   this.setState({
-  //     img
-  //   })
-  // } 
+  handleSubmit = async (e) => {
+    e.preventDefault();
+    const singleImg = await generatePics(this.state.date);
+    this.setState({
+      singleImg
+    })
+    this.props.history.push(`/${this.state.date}`)
+  }
+  
+  goToHome = () => {
+    this.setState({
+      singleImg: ''
+    })
+    this.props.history.push('/');
+  }
 
   render() {
     return (
       <div className="app">
         {/* <Route exact path="/" render={(=>(<Home />))}/> */}
-        <Header gifs={this.state.gifs} />
+        <Header gifs={this.state.gifs} handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
         <Hero />
         <main>
           <Route exact path='/' render={() => <Home img={this.state.img} gifs={this.state.gifs} />} />
-          <Route path='/:title' render={(props) => <Profile img={this.state.img.filter(i => i.title === props.match.params.title)} />} />
+          <Route path='/:title' render={(props) => <Profile singleImg={this.state.singleImg} img={this.state.img.filter(i => i.title === props.match.params.title)} goToHome={this.goToHome} />} />
         </main>
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);

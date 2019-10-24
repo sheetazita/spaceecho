@@ -24,7 +24,7 @@ header{
   font-family: 'Audiowide', cursive;
 }
 
-p{
+h1{
   font-size: 50px;
   color: white;
   text-align: center;
@@ -51,26 +51,27 @@ input{
   width: 90%;
   height: 80px;
   text-align: center;
-  font-size: 15px;
-  border: 3px solid white;
-  background: transparent;
+  font-size: 20px;
+  border: 1px solid white;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
 }
 
-input:focus{
-  background: white;
-  /* cursor: pointer; */
+::placeholder {
+  color: #FFBA3B;
+  font-size: 20px;
 }
 
 button {
   height: 65px;
   width: 15%;
-  border: 3px solid white;
+  border: 1px solid white;
   color: white;
   font-size: 20px;
-  font-weight: bold;
-  background: transparent;
+  /* font-weight: bold; */
+  background: rgba(0, 0, 0, 0.4);
   margin-top: 20px;
-  margin-left: 41%;
+  margin-left: 42.5%;
   cursor: pointer;
 }
 
@@ -93,37 +94,40 @@ button {
 
 .imgContainer{
   background: #000000;
-  /* background: black; */
   background-repeat: no-repeat;
-  /* background-size: cover; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center; 
   margin-top: 80px;
-  border: 1px solid yellow;
-  /* width: 100%; */
+  /* border: 1px solid yellow; */
 }
 .imgContainer a{
-  width:500px;
-  border: 1px solid purple;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  width:400px;
+  height: 460px;
+  /* border: 1px solid purple; */
+  display: block;
+text-align: center;
+/* text-decoratio   n; */
+
 }
 
 .space-img{
-  border: 1px solid blue;
-  width: 100%;
+  /* border: 1px solid blue; */
+  width: 90%;
   height: 400px;
   object-fit: cover;
-  margin: 10px 10px;
+  margin: 10px 5px;
   border-radius: 10px;
 }
 
 h3{
-  font-size: 12px;
+  position: relative;
+  top: -15px;
+  color: white;
+  font-size: 15px;
   text-align: center;
   word-wrap: break-word;
+  font-family: 'Muli', sans-serif;
 }
 
 .hero{
@@ -133,4 +137,59 @@ h3{
 
 .profilePic{
   width: 400px;
+}
+
+.home{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  /* border-bottom: 0.5px solid white; */
+  position: relative;
+  top: -75px;
+  padding-top: 20px;
+  height: 80px;
+  cursor: pointer;
+}
+
+#single-image{
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 600px;
+  margin-top: -30px;
+}
+
+.profilePic{
+  /* border: 1px solid yellow; */
+  width: 40%;
+  margin-left: 10%;
+}
+
+h2{
+  color: white;
+  width: 400px;
+  font-size: 25px;
+  /* border: 1px solid white; */
+  text-align: center;
+  margin-top: -35px;
+  padding-top: 15px;
+}
+
+.text-area{
+  /* border: 1px solid blue; */
+  width: 500px;
+  left: 700px;
+  text-align: center;
+  position: absolute;
+  top: 920px;
+  left: 55%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+p{
+  color: white;
+  line-height: 29px;
+  font-size: 20px;
 }

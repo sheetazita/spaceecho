@@ -16,7 +16,7 @@ function Home(props) {
         {
           props.img.map(img => (
             <Link to={`/${img.title}`} key="title">
-              <img className="space-img" src={img.url} />
+              <img className="space-img" src={img.url} alt="spaceimg" />
               <h3>{img.title}</h3>
              </Link>            
           ))
