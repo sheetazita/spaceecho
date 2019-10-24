@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import Hero from './components/Hero';
 import Profile from './components/Profile';
+import Footer from './components/Footer';
 import { getImage1, getImage2, getImage3, getImage4, getImage5, getImage6, getImage7, getImage8, getImage9, getGifs, generatePics } from './service/api-helper';
 
 // let apiKey = "4rK3fduciaheLDga1gdCJwMdxz7hWweZqBSlLnoH";
@@ -73,6 +74,7 @@ class App extends React.Component {
           <Route exact path='/' render={() => <Home img={this.state.img} gifs={this.state.gifs} />} />
           <Route path='/:title' render={(props) => <Profile singleImg={this.state.singleImg} img={this.state.img.filter(i => i.title === props.match.params.title)} goToHome={this.goToHome} />} />
         </main>
+        <Footer />
       </div>
     );
   }
