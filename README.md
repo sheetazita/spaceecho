@@ -1,4 +1,5 @@
 #spaceecho
+![wireframes](https://github.com/sheetazita/spaceecho/blob/master/project2-home.jpg)
 Project Description:
 The main goal for this website is for space enthusiast to browser freshly taken pictures of space of each day.  This website is for users to enjoy, and able to share pictures to friends.  The website will also allow users to upload their own favorite space picture onto the page.  This website will grow as there are more users and more shares.   
 
