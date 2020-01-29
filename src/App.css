@@ -185,20 +185,25 @@ h2{
   padding-top: 15px;
 }
 
+footer i{
+  color: #FFBA3B;
+  font-size: 40px;
+}
+
 p{
-  color: white;
+  color: #FFBA3B;
   line-height: 29px;
   font-size: 20px;
-  margin-top: -20px;
+  margin-top: -10px;
 }
 
 footer{
   background: rgba(0, 0, 0, 0.6);
   color: white;
-  height: 50px;
+  height: 80px;
   /* border: 1px solid red; */
   text-align: center;
-  margin-top: 30px;
+  padding-top: 10px;
 }
 
 footer p{
